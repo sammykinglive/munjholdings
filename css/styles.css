@@ -1,0 +1,1081 @@
+/* Reset default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'lato', sans-serif;
+  }
+  
+
+
+
+
+  /* Live banner styles */
+  .live-banner {
+    background-color:  #F9550E; /* Black background */
+    color: #fff; /* White text */
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+  
+  .live-banner-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: scroll-left 15s linear infinite;
+  }
+  
+  #live-prices {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* White text */
+    padding-left: 100%; /* Start off-screen */
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+
+
+
+  
+/* Background color for the header */
+.custom-header {
+    background-color: #1a1a1a !important;
+    padding: 2px 0;
+  }
+  
+  /* Override any Bootstrap styles */
+  .navbar {
+    background-color: transparent !important; /* Prevent Bootstrap from applying its default styles */
+  }
+  
+  /* Adjust the logo's size and spacing */
+  .navbar-brand img {
+    width: 100px;
+    margin-right: 10px;
+  }
+  
+  /* Style the navigation links */
+  .navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+    padding: 5px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  background-color: #F9550E; /* Background color on hover or focus */
+  color: white !important; /* Keep text color white on hover or focus */
+  border-radius: 5px; /* Optional: add border-radius for rounded corners */
+}
+
+  /* Style the login button */
+  .navbar-collapse .btn {
+    background-color: #ffffff;
+    border: 1.5px solid #F9550E;
+    color: #F9550E;
+    padding: 5px 20px;
+    font-family: 'Krona One', sans-serif;
+  }
+  
+  .navbar-collapse .btn:hover {
+    background-color: #F9550E;
+    color: #000000;
+  }
+  
+  /* Style the navigation toggle button */
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #F9550E;
+  }
+  
+  /* Align the navigation links to the right on larger screens */
+  @media (min-width: 768px) {
+    .navbar-nav {
+      margin-left: auto;
+    }
+  
+    .navbar-collapse .btn {
+      margin-left: 20px;
+    }
+  }
+  
+  /* Style adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .navbar-collapse .btn {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background-color: #ffffff;
+    }
+  }
+
+  
+
+
+
+/* Scroll Effect Defaults */
+.scroll-effect {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Optional Bounce Effect */
+.scroll-effect-bounce {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.scroll-visible-bounce {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+ /* Hero Section Styles */
+.hero {
+  position: relative;
+  height: 500px;
+  font-family: 'krona one', sans-serif;
+  color: white;
+  overflow: hidden; /* Ensure the slideshow stays within bounds */
+}
+
+
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Keep slideshow below the content */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 2.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2; /* Ensure content is above the slideshow */
+  height: 100%;
+  padding: 0 20px;
+  margin-left: 100px;
+  width: 100%;
+  
+}
+
+
+
+.hero-text {
+  position: relative;
+  z-index: 3; /* Ensure text is above the overlay */
+  width: 50%;
+  padding: 30px 20px;
+}
+
+
+.hero-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.603); /* Dark overlay with 50% opacity */
+  z-index: 2; /* Ensure the overlay is below the text but above the slideshow */
+  border-radius: 1px; /* Optional: adds rounded corners to the overlay */
+  pointer-events: none; /* Prevent the overlay from blocking text interaction */
+}
+
+.hero h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff; /* Ensure text color contrasts with overlay */
+  position: relative; /* Keep text above the overlay */
+  z-index: 4; /* Higher than the overlay */
+}
+
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #dddddd; /* Ensure text color contrasts with overlay */
+  position: relative; /* Keep text above the overlay */
+  z-index: 4; /* Higher than the overlay */
+}
+
+
+.hero-ctas {
+  display: flex;
+  position: relative; /* Keep buttons above the overlay */
+  z-index: 4; 
+}
+
+.hero-ctas .btn {
+  background-color: #F9550E;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hero-ctas .btn:hover {
+  background-color: #555;
+}
+
+.hero-ctas .btn-second {
+  background-color: #ffffff;
+  color: #F9550E;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 2px solid #F9550E;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hero-ctas .btn-second:hover {
+  color: white;
+  background-color: #F9550E;
+}
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px;
+    height: 600px;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    width: auto;
+  }
+  
+  .hero-text {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero h1 br {
+    display: none;
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-ctas .btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero-image {
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    transform: rotate(90deg);
+    animation: pulse-animation 5s infinite ease-in-out;
+  } 
+
+  @keyframes pulse-animation {
+    0% {
+      transform: rotate(90deg) scale(1);
+    }
+    50% {
+      transform: rotate(90deg) scale(1.2);
+    }
+    100% {
+      transform: rotate(90deg) scale(1);
+    }
+  }
+
+ }
+
+  
+  
+
+
+
+
+
+  
+
+  /* Section Styling */
+  .about {
+    padding: 0 0 0 0;
+    background-color: #ffffff;
+  }
+
+  /* Container Styling */
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px  40px;
+  }
+
+  /* Text Styling */
+  .about-text {
+    flex-basis: 50%;
+    padding: 20px;
+    
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+    color: #a73301;
+    margin-bottom: 10px;
+    font-family: 'krona one', sans-serif;
+  }
+
+  .about-text p {
+    color: #1d1d1d;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-family: 'roboto', sans-serif;
+  
+    font-size: 18px;
+  }
+
+  /* Stat Numbers Styling */
+  .stat-numbers {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #f5f5f5;
+    border-radius: 2px;
+  }
+
+  .stat {
+    text-align: center;
+    
+  }
+
+  
+ .stat .number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #a73301;
+    display: block;
+    
+    border-radius: 5px;
+    
+    animation: count-up 3s ease-in-out; /* Add the count-up animation */
+  }
+
+  @keyframes count-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  .stat .label {
+    color: #1f1f1f;
+    padding-top: 20px;
+    animation: fade-in 5s ease-in-out forwards; 
+    line-height: 0.5;
+  }
+
+  /* Keyframes for fade-in animation */
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  .about-cta .btn {
+    background-color: #ffffff;
+    color: #F9550E;
+    text-decoration: none;
+    border: 2px solid #F9550E;
+    padding: 10px 20px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease-in-out;
+    font-family: 'krona one', sans-serif;
+  }
+  
+  .about-cta .btn:hover {
+    background-color: #F9550E; /* Adjust the hover background color */
+    font-family: 'krona one', sans-serif;
+    color: #ffffff;
+  }
+
+
+
+
+  /* Image Styling */
+  .about-image {
+    flex-basis: 50%;
+    
+  }
+
+  .about-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+
+  @media screen and (max-width: 767px) {
+    /* Section Styling */
+    .about {
+      padding: 10px 0;
+      background-color: #ffffff;
+    }
+  
+    /* Container Styling */
+    .about-content {
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+  
+    /* Text Styling */
+    .about-text {
+      flex-basis: 100%;
+      margin-bottom: 40px;
+      
+    }
+  
+    .about-text h2 {
+      font-size: 26px;
+      text-align: center;
+    }
+  
+    .about-text p {
+      text-align: center;
+    }
+
+    .about-cta .btn{
+      width: 100%;
+    }
+  
+    /* Stat Numbers Styling */
+    .stat-numbers {
+      display: flex;
+      
+      justify-content: center;
+      margin-bottom: 20px;
+      width: 100%;
+      font-size: 20px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+
+    }
+  
+    .stat {
+      flex-basis: 33%;
+      margin-bottom: 20px;
+    }
+  
+    /* Image Styling */
+    .about-image {
+      flex-basis: 100%;
+    }
+  
+    .about-image img {
+      max-height: none;
+
+    }
+  }
+  
+
+
+
+
+  /* Services Section Styles */
+ .services {
+    text-align: center; /* Center align the services section */
+    padding: 70px 150px 20px;
+    background-color: #f7f7f7;
+    
+  }
+
+  .service-text {
+    padding-bottom: 50px;
+  }
+
+  .services h2{
+    font-family: 'krona one', sans-serif;
+    color: #5b6652;
+    padding-bottom: 5px;
+    font-size: 26px;
+  }
+
+  .services p{
+    font-family: 'roboto', sans-serif;
+    font-size: 18px;
+  }
+
+  
+  .about-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add spacing between icons and the rest of the content */
+
+  }
+  
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px; /* Adjust spacing between icons */
+    background-color: #fff; /* Set background color for icons */
+    border-radius: 5px; /* Add border radius to create rounded corners */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* Add box shadow to the background of icons */
+    padding: 40px 30px; /* Add padding to the icons */
+  }
+  
+
+  
+
+  
+  
+  .icon:nth-child(1) i {
+    animation-delay: 0s; /* Delay the animation for the first icon */
+  }
+  
+  .icon:nth-child(2) i {
+    animation-delay: 0.2s; /* Delay the animation for the second icon */
+  }
+  
+  .icon:nth-child(3) i {
+    animation-delay: 0.5s; /* Delay the animation for the third icon */
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Initial position */
+    }
+    50% {
+      transform: translateY(-10px); /* Bounce up position */
+    }
+    100% {
+      transform: translateY(0); /* Back to initial position */
+    }
+  }
+  
+  .icon i {
+    font-size: 30px; /* Adjust the size of the icons */
+    margin-bottom: 10px; /* Add spacing between icon and label */
+    color: #F9550E; /* Adjust the color of the icons */
+    animation: bounce 2s infinite alternate;
+    padding: 0 60px;
+  }
+  
+
+  .icon:nth-child(1) i {
+    animation-delay: 0s; /* Delay the animation for the first icon */
+  }
+  
+  .icon:nth-child(2) i {
+    animation-delay: 0.2s; /* Delay the animation for the second icon */
+  }
+  
+  .icon:nth-child(3) i {
+    animation-delay: 0.4s; /* Delay the animation for the third icon */
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Initial position */
+    }
+    50% {
+      transform: translateY(-10px); /* Bounce up position */
+    }
+    100% {
+      transform: translateY(0); /* Back to initial position */
+    }
+  }
+  
+  
+  
+
+  .label {
+    font-size: 16px;
+    text-align: center;
+    color: #141414; /* Adjust the label color */
+    
+    width: 100%;
+  }
+  
+  /* Media Query for Mobile */
+  @media (max-width: 767px) {
+    .services {
+      display: block; /* Change to block layout for mobile */
+      text-align: center; /* Center align the content */
+      padding: 50px 20px; /* Adjust padding for mobile */
+    }
+  
+    .services h2 {
+      font-size: 24px; /* Adjust the heading font size for mobile */
+      margin-bottom: 20px; /* Add spacing below the heading */
+    }
+  
+    .about-icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Use grid layout with automatic column fit */
+      gap: 20px; /* Adjust the gap between icons */
+      justify-content: center;
+    }
+  
+    .icon {
+      margin: 0; /* Remove margin to make use of grid gap */
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+/* Highlights Section Styles */
+.highlights {
+  background-image: url("../images/bg4.jpg");
+  background-size: cover;
+  background-position: center;
+    display: flex;
+    flex-direction: row; /* Set the direction to row */
+    align-items: center;
+    justify-content: space-between; /* Distribute space between items */
+    padding: 80px 100px; /* Adjust padding as needed */
+    
+  }
+  
+  .highlight-text {
+    flex: 1; /* Allow the text to take up available space */
+    text-align: right;
+    margin-left: 30px; /* Space between text and content */
+  }
+  
+  .highlight-text h2 {
+    font-size: 2em; /* Adjust font size as needed */
+    margin-bottom: 50px;
+  }
+  
+  .highlight-text p {
+    font-size: 1.2em; /* Adjust font size as needed */
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  
+  .highlight-content {
+    flex: 2; /* Allow the content to take up more space */
+    display: flex;
+    flex-direction: row; /* Set the direction to row */
+    gap: 20px; /* Space between rows */
+    padding: 0 20px;
+  }
+
+
+
+  .highlight-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+  }
+  
+  .highlight-row:hover {
+    transform: translateY(-10px); /* Slightly bounce up on hover */
+  }
+  
+
+
+  
+  .highlight-row-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    flex: 1; /* Allow each row to take up equal space */
+    background-image: url('../images/aaa.png'); /* Adjust the path to your image */
+    background-size: cover; /* Ensure the background image covers the entire element */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add padding inside the highlight row */
+    border-radius: 10px; /* Optional: add border-radius for rounded corners */
+    color: white; /* Ensure text color is visible on the background image */
+    
+  }
+
+  .highlight-row-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    flex: 1; /* Allow each row to take up equal space */
+    background-image: url('../images/Frame\ b.png'); /* Adjust the path to your image */
+    background-size: cover; /* Ensure the background image covers the entire element */
+    background-position: center; /* Center the background image */
+    padding: 20px; 
+    border-radius: 10px; 
+    color: white; 
+  }
+
+  .highlight-row-three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    flex: 1; /* Allow each row to take up equal space */
+    background-image: url('../images/Frame\ c.png'); /* Adjust the path to your image */
+    background-size: cover; /* Ensure the background image covers the entire element */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add padding inside the highlight row */
+    border-radius: 10px; /* Optional: add border-radius for rounded corners */
+    color: white; /* Ensure text color is visible on the background image */
+  }
+
+  
+  .highlight-row-content i {
+    font-size: 3em; /* Adjust icon size as needed */
+    color: #ffffff; /* Adjust icon color as needed */
+    margin-bottom: 10px;
+    
+  }
+  
+  .highlight-row-content h3 {
+    font-size: 1.5em; /* Adjust font size as needed */
+    margin-top: 200px;
+    font-weight: bold;
+  }
+
+
+
+
+/* Responsive Design for Highlights Section */
+@media (max-width: 1024px) {
+  /* For Tablets and Small Screens */
+  .highlights {
+    padding: 60px 50px; /* Adjust padding for smaller screens */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center the items */
+  }
+  
+  .highlight-text {
+    text-align: center;
+    margin-left: 0; /* Remove the left margin */
+    margin-bottom: 40px; /* Adjust margin for spacing */
+  }
+
+  .highlight-text h2 {
+    font-size: 1.8em; /* Adjust font size for smaller screens */
+    
+  }
+
+  .highlight-text p {
+    font-size: 1.1em; /* Adjust font size for smaller screens */
+  }
+
+  .highlight-content {
+    display: flex; /* Keep display as flex */
+    flex-direction: row; /* Keep flex row */
+    gap: 20px; /* Space between rows */
+    padding: 0;
+  }
+
+  .highlight-row {
+    flex: 1;
+    width: 100%; /* Ensure each row takes full width */
+    margin-bottom: 20px; /* Add space between rows */
+  }
+
+  .highlight-row-one, .highlight-row-two, .highlight-row-three {
+    background-size: cover; /* Ensure the background still covers */
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .highlight-row-content i {
+    font-size: 2.5em; /* Adjust icon size for smaller screens */
+  }
+
+  .highlight-row-content h3 {
+    font-size: 1.2em; /* Adjust heading size for smaller screens */
+    margin-top: 20px; /* Adjust margin to keep content visible */
+  }
+}
+
+@media (max-width: 768px) {
+  /* For Mobile Devices */
+  .highlights {
+    padding: 40px 20px; /* Further reduce padding for smaller screens */
+  }
+  
+  .highlight-text h2 {
+    font-size: 1.6em; /* Adjust font size for mobile */
+  }
+
+  .highlight-text p {
+    font-size: 1em; /* Adjust font size for mobile */
+  }
+
+  .highlight-content {
+    display: flex; /* Keep flex row */
+    flex-direction: row; /* Keep flex row */
+    gap: 15px;
+  }
+
+  .highlight-row {
+    width: 100%; /* Ensure rows take full width */
+    margin-bottom: 15px; /* Add space between rows */
+  }
+
+  .highlight-row-one, .highlight-row-two, .highlight-row-three {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .highlight-row-content i {
+    font-size: 2em; /* Further reduce icon size */
+  }
+
+  .highlight-row-content h3 {
+    font-size: 1em; /* Adjust heading size for mobile */
+  }
+}
+
+
+
+
+
+
+
+  .footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .footer-links,
+  .footer-contact {
+    flex: 1 1 300px;
+  }
+  
+  .footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f0c040;
+  }
+  
+  .footer p,
+  .footer ul,
+  .footer a {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer p {
+    margin-bottom: 10px;
+  }
+  
+  .footer a {
+    color: #f0c040;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+ 
+
+
+  @media (max-width: 768px) {
+    /* Footer Styling for Mobile */
+    .footer {
+      padding: 30px 15px; /* Reduce padding for mobile */
+    }
+  
+    .footer-container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: flex-start; /* Align items to the left */
+    }
+  
+    .footer-logo img {
+      width: 120px; /* Reduce logo size */
+      
+    }
+  
+    .footer-links,
+    .footer-contact {
+      flex: 1 1 100%; /* Ensure the links and contact sections take full width */
+      margin-bottom: 20px; /* Add space between sections */
+    }
+  
+    .footer h4 {
+      font-size: 16px; /* Adjust font size for mobile */
+      margin-bottom: 10px;
+    }
+  
+    .footer p,
+    .footer ul,
+    .footer a {
+      font-size: 12px; /* Adjust font size for mobile */
+    }
+  
+    .footer ul {
+      display: flex; /* Display list items in a row */
+      flex-wrap: wrap; /* Allow items to wrap onto the next line if needed */
+      padding: 0;
+      list-style: none; /* Remove default list styling */
+    }
+    
+    .footer li {
+      margin-right: 15px; /* Add spacing between list items */
+      margin-bottom: 10px; /* Add vertical spacing if items wrap */
+    }
+    
+
+
+    .footer-links li {
+      margin-bottom: 8px; /* Adjust spacing for list items */
+    }
+  
+    .footer-bottom {
+      font-size: 12px; /* Adjust font size for footer bottom */
+      margin-top: 20px; /* Reduce margin-top */
+    }
+  
+    .footer-bottom p {
+      margin: 0; /* Ensure no extra margin */
+    }
+  }
+  
+  
