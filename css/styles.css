@@ -13,7 +13,7 @@ body, html {
   .live-banner {
     background-color:  #F9550E; /* Black background */
     color: #fff; /* White text */
-    padding: 10px 0;
+    padding: 5px 0;
     font-family: Arial, sans-serif;
     overflow: hidden;
     position: relative;
@@ -302,7 +302,7 @@ body, html {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .hero {
-    padding: 50px;
+    padding: 50px 10px;
     height: 600px;
   }
   
@@ -695,10 +695,15 @@ body, html {
     }
   
     .services h2 {
-      font-size: 24px; /* Adjust the heading font size for mobile */
+      font-size: 20px; /* Adjust the heading font size for mobile */
       margin-bottom: 20px; /* Add spacing below the heading */
+      
     }
   
+    .services p {
+      font-size: 18px; /* Adjust the heading font size for mobile */
+     
+    }
     .about-icons {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Use grid layout with automatic column fit */
@@ -744,12 +749,14 @@ body, html {
   .highlight-text h2 {
     font-size: 2em; /* Adjust font size as needed */
     margin-bottom: 50px;
+    margin-top: 20px;
   }
   
   .highlight-text p {
-    font-size: 1.2em; /* Adjust font size as needed */
+    font-size: 18px; /* Adjust font size as needed */
     line-height: 1.5;
     margin-bottom: 0;
+    color: #ac3908;
   }
   
   .highlight-content {
@@ -914,11 +921,13 @@ body, html {
     display: flex; /* Keep flex row */
     flex-direction: row; /* Keep flex row */
     gap: 15px;
+    
   }
 
   .highlight-row {
     width: 100%; /* Ensure rows take full width */
     margin-bottom: 15px; /* Add space between rows */
+    height: 250px;
   }
 
   .highlight-row-one, .highlight-row-two, .highlight-row-three {
@@ -931,6 +940,7 @@ body, html {
 
   .highlight-row-content h3 {
     font-size: 1em; /* Adjust heading size for mobile */
+    margin-top: 100px;
   }
 }
 
