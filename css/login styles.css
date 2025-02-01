@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("../images/login2.jpg");
+    background-image: url("../images/login4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@ body {
 
   .header-cta a {
     background-color: #F9550E;
-    color: #000000;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     
@@ -60,7 +60,7 @@ body {
   }
   
   .login-content p {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   
   .login-form input,
@@ -81,7 +81,7 @@ body {
     cursor: pointer;
     font-weight: 600;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 60px;
   }
   
   .login-form button:hover {

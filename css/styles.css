@@ -12,7 +12,7 @@ body, html {
 .live-banner {
   background-color: #f9550e; /* Orange background */
   color: #fff; /* White text */
-  padding: 10px 0;
+  padding: 10px 0 0 0;
   font-family: Arial, sans-serif;
   overflow: hidden;
   position: relative;
