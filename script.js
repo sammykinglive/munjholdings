@@ -187,28 +187,12 @@ aboutDivs.forEach(function (div) {
 
 
 
-
-
-
-// Live banner
-
-
+//Live stock prices
 
 document.addEventListener("DOMContentLoaded", function () {
   const livePrices = document.getElementById("live-prices");
   const apiKey = "E0K5W2APOR7RYTO0"; // Replace with your API key
-  const symbols = [
-    "GOLD",
-    "SILVER",
-    "OIL",
-    "BTCUSD",
-    "ETHUSD",
-    "AAPL",
-    "AMZN",
-    "MSFT"
-  ];
-
-  
+  const symbols = ["GOLD", "SILVER", "OIL", "BTCUSD", "ETHUSD"];
 
   async function fetchStockPrices() {
     try {
@@ -220,9 +204,6 @@ document.addEventListener("DOMContentLoaded", function () {
         )
       );
       const data = await Promise.all(responses.map((res) => res.json()));
-
-      // Log the data to see what you are getting
-      console.log("API Data:", data);
 
       const prices = data.map((item, index) => {
         const price = item["Global Quote"]?.["05. price"];
@@ -245,12 +226,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 // Private area logout
 
 function logout() {
   sessionStorage.removeItem("loggedIn");
-  window.location.href = "login.html";
+  window.location.href = "../login.html";
 }
 
 

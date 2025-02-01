@@ -8,48 +8,47 @@ body, html {
 
 
 
+/* Live banner styles */
+.live-banner {
+  background-color: #f9550e; /* Orange background */
+  color: #fff; /* White text */
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+  border: 2px solid #ffffff;
+}
 
-  /* Live banner styles */
-  .live-banner {
-    background-color:  #F9550E; /* Black background */
-    color: #fff; /* White text */
-    padding: 5px 0;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    position: relative;
-    z-index: 1000; /* Ensure it appears above other content */
+.live-banner-container {
+  width: 100%;
+  height: 100%;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+#live-prices {
+  display: inline-block;
+  animation: scroll-left 15s linear infinite;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Keyframes for scrolling */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
   }
-  
-  .live-banner-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  100% {
+    transform: translateX(-100%);
   }
-  
-  .marquee {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: scroll-left 15s linear infinite;
-  }
-  
-  #live-prices {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff; /* White text */
-    padding-left: 100%; /* Start off-screen */
-  }
-  
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
+}
+
 
 
 
