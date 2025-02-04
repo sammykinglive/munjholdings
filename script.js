@@ -29,10 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-
 // Page scroll effect
 
 
@@ -85,7 +81,7 @@ function countUpStats() {
   
     statNumbers.forEach((numberElement) => {
       const target = parseInt(numberElement.getAttribute('data-count'));
-      const duration = 5000; // Animation duration in milliseconds
+      const duration = 1000; // Animation duration in milliseconds
       const increment = Math.ceil(target / (duration / 50)); // Increment value per interval (adjust as needed)
   
       let current = 0;
