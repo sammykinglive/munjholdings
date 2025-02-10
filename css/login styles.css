@@ -116,7 +116,10 @@ body {
 /* Media Query for Mobile */
 @media (max-width: 767px) {
    
-    
+  .main {
+   
+    height: 100vh;
+  }
    
     .header {
       flex-direction: row;
@@ -128,17 +131,22 @@ body {
     }
   
     .login-content {
-      height: auto;
+      height: 500px;
       padding: 20px;
     }
   
     .login-content h2 {
-      font-size: 20px;
+      font-size: 30px;
     }
   
     .login-form input,
     .login-form button {
       margin-bottom: 15px;
+    }
+
+    .login-form button {
+      
+      margin-top: 80px;
     }
   
     .footer {
