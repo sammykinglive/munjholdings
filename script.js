@@ -29,6 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
+
+
 // Page scroll effect
 
 
@@ -81,7 +85,7 @@ function countUpStats() {
   
     statNumbers.forEach((numberElement) => {
       const target = parseInt(numberElement.getAttribute('data-count'));
-      const duration = 1000; // Animation duration in milliseconds
+      const duration = 50000; // Animation duration in milliseconds
       const increment = Math.ceil(target / (duration / 50)); // Increment value per interval (adjust as needed)
   
       let current = 0;
@@ -187,8 +191,19 @@ aboutDivs.forEach(function (div) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const livePrices = document.getElementById("live-prices");
-  const apiKey = "E0K5W2APOR7RYTO0"; // Replace with your API key
-  const symbols = ["GOLD", "SILVER", "OIL", "BTCUSD", "ETHUSD"];
+  const apiKey = "TD4IPMBBHXV1WJFC"; // Replace with your API key
+  const symbols = [
+    "GOLD", 
+    "SILVER", 
+    "OIL", 
+    "BTCUSD", 
+    "ETHUSD", 
+    "EURUSD",  // Euro to US Dollar
+    "GBPUSD",  // British Pound to US Dollar
+    "COPPER",  // Copper prices
+    "PLATINUM", // Platinum prices
+    "CRUDE"    // Crude Oil (WTI)
+  ];
 
   async function fetchStockPrices() {
     try {

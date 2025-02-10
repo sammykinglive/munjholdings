@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/private.css">
+    <title>Munj Ltd.</title>
+    <link rel="icon" href="../images/logonew 1.png" type="image/png">
+</head>
+<body>
+
+ <!-- Live Banner -->
+  <div class="live-banner">
+    <div class="live-banner-container">
+      <div class="marquee">
+        <p id="live-prices">Gold: $N/A | Silver: $N/A | Oil: $N/A</p>
+
+      </div>
+    </div>
+  </div>
+  
+
+    <header class="custom-header">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="../images/logonew 1.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#services">Our Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#footer">Contacts</a>
+                </li>
+              </ul>
+              <button onclick="logout()" class="btn btn-secondary">Logout</button>
+
+            </div>
+          </div>
+        </nav>
+      </header>
+      
+
+    
+    
+      
+      <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Hey, Lonnie Porch</h2>
+            <div class="fee-section">
+                <div class="fee demurrage-fee">
+                    <span class="demurrage">Demurrage Fee</span>
+                    <span class="amount red">USD 1,000.00</span>
+                </div>
+                <div class="fee amount-paid">
+                    <span class="amountpaid">Amount Paid</span>
+                    <span class="amount green">USD 1,000.00</span>
+                </div>
+                <div class="fee total-value">
+                    <span class="totalvalue">Total Value of Content</span>
+                    <span class="amount">USD 1,000.00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="depositor-info">
+                <div class="info">
+                    <span class="label">Name of Depositor</span>
+                    <span class="value">Lonnie Porch</span>
+                </div>
+                <div class="info">
+                    <span class="label">Date of Deposit</span>
+                    <span class="value">January 20, 2025</span>
+                </div>
+                <div class="info">
+                    <span class="label">Address</span>
+                    <span class="value">95 Bratt Thomas Rd, Brownsville, TN, 38012, United States Of America</span>
+                </div>
+                <div class="info">
+                    <span class="label">Next Of Kin</span>
+                    <span class="value">Lonnie Porch</span>
+                </div>
+            </div>
+
+            <div class="deposit-content">
+              <h3>Content of Deposit</h3>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Item</th>
+                          <th>Description</th>
+                          <th>Details</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Diamond</td>
+                          <td>
+                              <ul>
+                                  <li>Quantity</li>
+                                  <li>Weight</li>
+                                  <li>Shape</li>
+                                  <li>Color</li>
+                                  <li>Karat</li>
+                                  <li>Classification</li>
+                                  <li>Origin</li>
+                              </ul>
+                          </td>
+                          <td>
+                              <ul>
+                                  <li> 2</li>
+                                  <li>2kg</li>
+                                  <li>Round</li>
+                                  <li>White</li>
+                                  <li>24</li>
+                                  <li>VVS1</li>
+                                  <li>Ghana</li>
+                              </ul>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>Gold</td>
+                          <td>
+                              <ul>
+                                  <li>Quantity</li>
+                                  <li>Weight</li>
+                                  <li>Purity</li>
+                                  <li>Origin</li>
+                              </ul>
+                          </td>
+                          <td>
+                              <ul>
+                                  <li>10 bars</li>
+                                  <li>5kg</li>
+                                  <li>99.9%</li>
+                                  <li>Ghana</li>
+                              </ul>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+     
+
+     
+                
+
+
+
+
+
+
+      <div class="scroll-function">
+        <nav>
+          <ul>
+            <li><a href="#" id="scrollToTopLink"><button><i class="fas fa-chevron-up"></i> </button></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      
+
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="images/Logo.png" alt="Munj Holdings Ltd. Logo" />
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Our Services</a></li>
+              <li><a href="#faq">FAQs</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Email: <a href="mailto:info@munjholdings.com">info@munjholdings.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+            <p>Location: 123 Secure Vault Road, City, Country</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Munj Holdings Ltd. All rights reserved.</p>
+        </div>
+      </footer>
+      
+
+      
+      
+      
+      
+    
+     
+    
+      <!-- Additional sections and content of your website -->
+       
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="../script.js"></script>
+</body>
+</html>
